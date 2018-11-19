@@ -14,7 +14,7 @@ import { UiModule } from './ui/ui.module';
     BrowserModule,
     LoginModule,
     UiModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot() // Importation NG-Bootstrap
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,3 +3,100 @@ Todo:
   ☐ breakpoints et explain bootstrap 4 and grids
   ☐ grids system and gutters
   ☐ life cycle hooks
+
+  ☐ Module 1 : Concepts de base du JavaScript
+  ✔ Principes et fonctionnements @done(18-11-19 17:03)
+  ☐ Variables et types de données
+  ☐ Opérateurs
+  ☐ Instructions
+  ☐ Structures de contrôles (conditions, boucles...)
+  ☐ Définition et utilisation de fonctions
+  ☐ Objets prédéfinis(document, window ...)
+  ☐ Contrôle de saisies et traitement de formulaires
+  ☐ Gestion des fenêtres (ouverture, fermeture, communication)
+  ☐ Boîtes de dialogue
+  ☐ Atelier : apprendre à valider un formulaire
+
+  ☐ Module 2 : ANGULAR 5 - Introduction
+  ✔ Développement d'applications riches @done(18-11-19 17:03)
+  ✔ Panorama des frameworks disponibles @done(18-11-19 17:03)
+  ✔ Présentation de l'environnement de développement NodeJS @done(18-11-19 17:03)
+  ✔ Atelier : Installation et mise en route d'un projet Angular @done(18-11-19 17:03)
+
+  ☐ Module 3 : ES2015
+  ✔ Lien entre Angular et ES2015/TS @done(18-11-19 17:03)
+  ☐ Classes, fondamentaux: constructeur, méthode et gestion de contexte
+  ☐ Classes, avancés: héritage, méthodes statiques
+  ☐ Opérateurs set et get
+  ☐ Littéraux de Gabarits
+  ☐ Fonctions fléchées
+  ☐ Variables de bloc
+
+  ☐ Module 4 : Typescript
+  ☐ Déclaration de type
+  ☐ Interface et formes
+  ☐ Décorateurs
+
+  ☐ Module 5 : Première application
+  ☐ Dépendances d'Angular
+  ✔ Déclarer un composant @done(18-11-19 17:04)
+  ✔ Ajouter un gabarit @done(18-11-19 17:04)
+  ✔ Lancer l'application avec un serveur NodeJS @done(18-11-19 17:04)
+  ✔ Re-compiler automatiquement à chaque modification: le veilleur @done(18-11-19 17:04)
+  ☐ Ajouter des données, créer ses classes de modèle
+  ☐ Lier une donnée au gabarit, expressions et opérateur «moustache»
+  ☐ Gérer des collections, directive *ngFor
+  ☐ Atelier : Création d'une première application
+
+  ☐ Module 6 : Formulaire
+  ☐ Liaison des événements d'entrée
+  ☐ L'objet $event
+  ☐ Variable de référence de gabarit
+  ☐ Créaton de formulaire avec la syntaxe de gabarit
+  ☐ Liaison de données à double sens
+  ☐ Suivre et valider les saisies utilisateur avec ngControl
+  ☐ Soumettre le formulaire avec ngSubmit
+  ☐ Atelier : Gestion des entrées utilisateurs
+
+  ☐ Module 7 : Injection de dépendances
+  ☐ Principes de DI
+  ☐ Configurer l'injecteur
+  ☐ Enregistrer des fournisseurs dans un composant
+  ☐ Création de l'injecteur
+
+  ☐ Différents types de fournisseurs: classe, valeur, fabrique...
+  ☐ Atelier : Architecturer notre application sous forme d'une organisation de services
+
+  ☐ Module 8 : La Syntaxe de gabarit en détail
+  ☐ Interpollation, expression et instruction
+  ☐ Syntaxe de liaison: sens unique, double sens, cibles de liaison
+  ☐ Directives natives: NgClass, NgStyle, NgIf, NgSwitch, NgFor
+  ☐ Propriétés d'entrée et de sortie
+  ☐ Opérateurs d'expression de gabarit «|» et «?.»
+
+  ☐ Module 9 : Le client HTTP
+  ☐ Principe de communication asynchrone
+  ☐ Récupérer des données avec http.get
+  ☐ Observable RxJS
+  ☐ Prise en charge du transport JSON
+  ☐ Gestion des erreurs
+  ☐ Envoi de données au serveur
+  ☐ Fonctionnement des promesses
+  ☐ Sources externes: CORS
+  ☐ Atelier : Mettre en place un client d'API ReST
+
+  ☐ Module 10 : Routage
+  ☐ Routage côté client, hashtag et HTML5
+  ☐ Configuration des routes sur un composant
+  ☐ Récupérer des paramètres de routes
+  ☐ Stratégie de routes
+  ☐ Routes imbriquées
+  ☐ Atelier : Mettre en place une application multi-vues
+
+  ☐ Module 11 : Tester l'application
+  ☐ Fondamentaux des tests avec Jasmine
+  ☐ Automatisation des tests avec Karma
+  ☐ Tester des composants simples
+  ☐ Tester des composants avec services asynchrones
+  ☐ Tester des formulaires
+  ☐ Atelier : Multiples exemples de tests
