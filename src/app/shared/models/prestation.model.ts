@@ -15,7 +15,9 @@ export class Prestation implements PrestationI {
 
    // Partial: Permet de ne pas passer tous les paramètres à l'instantiation
    // fields?: le '?' rend le paramètre optionnel
-  constructor(fields?: Partial<Prestation>) {
+  constructor(
+      fields?: Partial<Prestation>
+  ) {
     if (fields) {
       Object.assign(this, fields); // Récupère les propriété d'un object pour l'affecter à un autre
     }

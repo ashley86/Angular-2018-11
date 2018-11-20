@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule, CurrencyPipe } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { TotalPipe } from './pipes/total.pipe';
 
 @NgModule({
@@ -8,6 +8,6 @@ import { TotalPipe } from './pipes/total.pipe';
   imports: [
     CommonModule
   ],
-  providers: [CurrencyPipe]
+  providers: []
 })
 export class SharedModule { }
