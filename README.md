@@ -42,7 +42,7 @@ ng g component [component-name] --module[module-name]
 ### Lifecycle Hooks
 
 1. **ngOnChanges()**: 
-Appelé lorsqu'un input change de valeur. Appelé 1 seule fois.
+. Appelé 1 seule fois au début puis Appelé lorsqu'un @input change de valeur, si variable de type string, number mais pas si modification une valeur de propriété de l'objet
 
 2. **ngOnInit()**: 
 Appelé pour initialiser les variables. Appelé 1 seule fois.
@@ -197,4 +197,8 @@ Pour récupérer toutes les URLs inconnues, utiliser dans le path: **
 
 ## Injection de dépendances
 
-shared > schematics > services > "prestation" > 
+shared > schematics > services > "prestation" 
+
+
+## Pipe
+Permet de formater une variable pour l'affichage

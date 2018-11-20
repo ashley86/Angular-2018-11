@@ -1,0 +1,15 @@
+<tr>
+    <td>{{ item.id }}</td>
+    <td>{{ item.typePresta }}</td>
+    <td>{{ item.client }}</td>
+    <td>{{ item.tauxTva + '%' }}</td>
+    <td>{{ item.nbJours }}</td>
+    <td>{{ item.tjmHt | currency:'EUR':true }}</td>
+    <!--
+       Really bad idea: À chaque modification de la vue, la fonction sera appelée autant de fois... Lifecycle
+       Préférer les PIPES |, ils ne rentrent pas dans le cycle de vie et ne sont donc appelés qu'une seule fois
+      <td>{{ item.totalHt() | currency:'EUR':true }}</td> -->
+    <td>{{ item | total }}</td>
+    <td>{{ item | total: item.tauxTva }}</td>
+    <td>{{ item.state }}</td>
+  </tr>
