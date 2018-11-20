@@ -1,5 +1,9 @@
 @import '~src/variables';
 
 a {
+  color: $dark-color;
+}
+
+.active {
   color: $palette-color-two;
 }
