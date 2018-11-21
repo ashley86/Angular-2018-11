@@ -17,7 +17,7 @@ Todo:
   ☐ Boîtes de dialogue
   ☐ Atelier : apprendre à valider un formulaire
 
-  ☐ Module 2 : ANGULAR 5 - Introduction
+  ✔ Module 2 : ANGULAR 5 - Introduction @done(18-11-21 12:56)
   ✔ Développement d'applications riches @done(18-11-19 17:03)
   ✔ Panorama des frameworks disponibles @done(18-11-19 17:03)
   ✔ Présentation de l'environnement de développement NodeJS @done(18-11-19 17:03)
@@ -25,17 +25,17 @@ Todo:
 
   ☐ Module 3 : ES2015
   ✔ Lien entre Angular et ES2015/TS @done(18-11-19 17:03)
-  ☐ Classes, fondamentaux: constructeur, méthode et gestion de contexte
+  ✔ Classes, fondamentaux: constructeur, méthode et gestion de contexte @done(18-11-21 12:56)
   ☐ Classes, avancés: héritage, méthodes statiques
-  ☐ Opérateurs set et get
+  ✔ Opérateurs set et get @done(18-11-21 12:56)
   ☐ Littéraux de Gabarits
   ☐ Fonctions fléchées
   ☐ Variables de bloc
 
-  ☐ Module 4 : Typescript
-  ☐ Déclaration de type
-  ☐ Interface et formes
-  ☐ Décorateurs
+  ✔ Module 4 : Typescript @done(18-11-21 12:56)
+  ✔ Déclaration de type @done(18-11-21 12:56)
+  ✔ Interface et formes @done(18-11-21 12:56)
+  ✔ Décorateurs @done(18-11-21 12:56)
 
   ☐ Module 5 : Première application
   ☐ Dépendances d'Angular
@@ -43,14 +43,14 @@ Todo:
   ✔ Ajouter un gabarit @done(18-11-19 17:04)
   ✔ Lancer l'application avec un serveur NodeJS @done(18-11-19 17:04)
   ✔ Re-compiler automatiquement à chaque modification: le veilleur @done(18-11-19 17:04)
-  ☐ Ajouter des données, créer ses classes de modèle
+  ✔ Ajouter des données, créer ses classes de modèle @done(18-11-21 12:57)
   ☐ Lier une donnée au gabarit, expressions et opérateur «moustache»
-  ☐ Gérer des collections, directive *ngFor
-  ☐ Atelier : Création d'une première application
+  ✔ Gérer des collections, directive *ngFor @done(18-11-21 12:57)
+  ✔ Atelier : Création d'une première application @done(18-11-21 12:57)
 
   ☐ Module 6 : Formulaire
   ☐ Liaison des événements d'entrée
-  ☐ L'objet $event
+  ✔ L'objet $event @done(18-11-21 12:57)
   ☐ Variable de référence de gabarit
   ☐ Créaton de formulaire avec la syntaxe de gabarit
   ☐ Liaison de données à double sens
@@ -59,13 +59,12 @@ Todo:
   ☐ Atelier : Gestion des entrées utilisateurs
 
   ☐ Module 7 : Injection de dépendances
-  ☐ Principes de DI
+  ✔ Principes de DI @done(18-11-21 12:57)
   ☐ Configurer l'injecteur
   ☐ Enregistrer des fournisseurs dans un composant
   ☐ Création de l'injecteur
-
   ☐ Différents types de fournisseurs: classe, valeur, fabrique...
-  ☐ Atelier : Architecturer notre application sous forme d'une organisation de services
+  ✔ Atelier : Architecturer notre application sous forme d'une organisation de services @done(18-11-21 12:58)
 
   ☐ Module 8 : La Syntaxe de gabarit en détail
   ☐ Interpollation, expression et instruction
@@ -86,11 +85,11 @@ Todo:
   ☐ Atelier : Mettre en place un client d'API ReST
 
   ☐ Module 10 : Routage
-  ☐ Routage côté client, hashtag et HTML5
-  ☐ Configuration des routes sur un composant
+  ✔ Routage côté client, hashtag et HTML5 @done(18-11-21 12:58)
+  ✔ Configuration des routes sur un composant @done(18-11-21 12:58)
   ☐ Récupérer des paramètres de routes
   ☐ Stratégie de routes
-  ☐ Routes imbriquées
+  ✔ Routes imbriquées @done(18-11-21 12:58)
   ☐ Atelier : Mettre en place une application multi-vues
 
   ☐ Module 11 : Tester l'application

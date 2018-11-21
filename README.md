@@ -280,3 +280,7 @@ Appliquer un `#` suivi du nom du composant
 ```html
 <app-header #header></app-header>
 ```
+
+À voir : <ng-factory>, création de template dynamique
+[Todd Motto](https://toddmotto.com/factory-versus-service)
+
