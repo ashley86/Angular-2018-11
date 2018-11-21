@@ -64,6 +64,11 @@ Appelé lorsque la vue a fini d'être initialisée. Permet par exemple de récup
 8. **ngOnDestroy()**: 
 Appelé lorsque l'on change de route. Permet de désouscrire au _Observable_, _etc..._ pour éviter les fuites mémoires
 
+**Ne pas oublier d'implémenter les lifecycle via `implements`**
+```javascript
+export class StateDirective implements OnInit, OnDestroy
+```
+
 ### Routing
 
 Demander au router d'instancer des composants et des vues préalablement paramétrés.
@@ -266,3 +271,12 @@ Dans le composant visé, ajouter, dans le décorateur:
 :host => 
 
 ::ng-deep => 
+
+### Création directive d'attribut
+
+### Nommer un component
+
+Appliquer un `#` suivi du nom du composant
+```html
+<app-header #header></app-header>
+```
