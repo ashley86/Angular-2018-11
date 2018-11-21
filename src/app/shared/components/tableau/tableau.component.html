@@ -5,9 +5,8 @@
         <th *ngFor="let item of headers">{{ item | titlecase }}</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody class=tab-list>
       <ng-content></ng-content>
     </tbody>
   </table>
 </div>
-<ng-content select="p"></ng-content>

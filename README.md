@@ -213,7 +213,7 @@ Objet [Values](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Ob
 
 Dans Shared, création d'un dossier `components`
 
-Transclusion: pouvoir projeter un template dans un autre template:
+###Transclusion: pouvoir projeter un template dans un autre template:
 
 Tout le code contenu de `app-prestation`...
 ```html
@@ -227,7 +227,7 @@ Tout le code contenu de `app-prestation`...
 <ng-content></ng-content>
 ```
 
-Tranclusion multiple
+###Tranclusion multiple
 
 On ajoute autant de contenu que l'on souhaite...
 ```html
@@ -249,3 +249,20 @@ On séléctionne via la directive `select` qui fonctionne comme un sélecteur CS
 **<ng-content> affiche dans le contenu dans le dernier élément**
 
 **<ng-content select="..."> affiche dans le contenu dans le premier élément**
+
+CSS : retirer le Shadow-DOM
+
+Dans le composant visé, ajouter, dans le décorateur:
+```javascript
+@Component({
+  selector: 'app-tableau',
+  templateUrl: './tableau.component.html',
+  styleUrls: ['./tableau.component.scss'],
+  encapsulation: ViewEncapsulation.None //-> Permet l'ouverture des CSS aux autres components (annule le shadow dom)
+})
+```
+**Attention à bien préciser les éléments CSS pour éviter les effets de bord sur le reste de l'app**
+
+:host => 
+
+::ng-deep => 
