@@ -1,0 +1,258 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>crm documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+	      <link rel="stylesheet" href="./styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="./" class="navbar-brand">crm documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content getting-started">
+                   <div class="content-data">
+
+<h1 id="formation-angular">Formation Angular</h1>
+<ul>
+<li>Organisme: <strong>EDUGROUP</strong></li>
+<li>Dates: <strong>19 au 23-11-2018</strong></li>
+<li>Formateur: <strong><a href="https://github.com/ChristopheGueroult">Christophe Gueroult</a></strong></li>
+</ul>
+<h2 id="outils">Outils</h2>
+<ul>
+<li><a href="https://code.visualstudio.com/download/">Visual Studio Code</a><ul>
+<li>Angular Essentials</li>
+<li>Beautify</li>
+<li>Bracket Pair colorizer 2</li>
+<li>GitHub</li>
+<li>Material Icon Theme</li>
+<li>Todo+</li>
+</ul>
+</li>
+<li><a href="https://nodejs.org/en/download/">NodeJs</a></li>
+<li><a href="https://git-scm.com/downloads/">Git</a></li>
+</ul>
+<h2 id="utilisation">Utilisation</h2>
+<h3 id="commandes-de-base">Commandes de base</h3>
+<p>Créer une application</p>
+<div><pre class="line-numbers"><code class="language-bash">ng new [app-name]</code></pre></div><p>Démarrer le serveur local</p>
+<div><pre class="line-numbers"><code class="language-bash">ng serve</code></pre></div><p>Créer un module</p>
+<div><pre class="line-numbers"><code class="language-bash">ng g module [module-name]</code></pre></div><p>Créer un composant dans un module</p>
+<div><pre class="line-numbers"><code class="language-bash">ng g component [component-name] --module[module-name]</code></pre></div><h3 id="lifecycle-hooks">Lifecycle Hooks</h3>
+<ol>
+<li><p><strong>ngOnChanges()</strong>: 
+. Appelé 1 seule fois au début puis Appelé lorsqu&#39;un @input change de valeur, si variable de type string, number mais pas si modification une valeur de propriété de l&#39;objet</p>
+</li>
+<li><p><strong>ngOnInit()</strong>: 
+Appelé pour initialiser les variables. Appelé 1 seule fois.</p>
+</li>
+<li><p><strong>ngDoCheck()</strong>: 
+Apprelé lorsque les propriétés changent. Lié à <em>ngAfterContentInit()</em>.</p>
+</li>
+<li><p><strong>ngAfterContentInit()</strong>: 
+Appelé juste après <em>ngDoCheck()</em>. Lié à <em>ngAfterContentChecked()</em>.</p>
+</li>
+<li><p><strong>ngAfterContentChecked()</strong>: 
+Appelé juste après <em>ngAfterContentInit()</em>.</p>
+</li>
+<li><p><strong>ngAfterViewInit()</strong>: 
+Appelé lorsque la vue a fini d&#39;être initialisée. Permet par exemple de récupérer la position d&#39;un élément du DOM ou la taille de la fenêtre. Appelé 1 seule fois. Lié à <em>ngAfterViewInit()</em>.</p>
+</li>
+<li><p><strong>ngAfterViewChecked()</strong>: Appelé juste après <em>ngAfterViewInit()</em>.</p>
+</li>
+<li><p><strong>ngOnDestroy()</strong>: 
+Appelé lorsque l&#39;on change de route. Permet de désouscrire au <em>Observable</em>, <em>etc...</em> pour éviter les fuites mémoires</p>
+</li>
+</ol>
+<p><strong>Ne pas oublier d&#39;implémenter les lifecycle via <code>implements</code></strong></p>
+<div><pre class="line-numbers"><code class="language-javascript">export class StateDirective implements OnInit, OnDestroy</code></pre></div><h3 id="routing">Routing</h3>
+<p>Demander au router d&#39;instancer des composants et des vues préalablement paramétrés.</p>
+<p>Garder la ligne suivante, dans le fichier <code>index.html</code></p>
+<div><pre class="line-numbers"><code class="language-html">&lt;base href=&quot;/&quot;&gt;</code></pre></div><p>Créer un module dédié aux routes, dans <code>/app</code></p>
+<div><pre class="line-numbers"><code class="language-bash">ng new module app-routing</code></pre></div><p>Dans ce module, importer le fichier</p>
+<div><pre class="line-numbers"><code class="language-javascript">import { RouterModule, Routes } from &#39;&#64;angular/router&#39;;</code></pre></div><p>Créer les routes</p>
+<div><pre class="line-numbers"><code class="language-javascript">const appRoutes: Routes = [
+  { path: &#39;login&#39;, component: PagesLoginComponent },
+  {
+    path: &#39;&#39;,
+    redirectTo: &#39;/login&#39;,
+    pathMatch: &#39;full&#39;, // Utilise la base de l&#39;url complète
+  }
+];</code></pre></div><p>Importer le <code>RouterModule</code> dans chaque module utilisant le <code>routing</code></p>
+<div><pre class="line-numbers"><code class="language-javascript">import { RouterModule } from &#39;&#64;angular/router&#39;;</code></pre></div><p>Utiliser dans le fichier convenu, le composant:</p>
+<div><pre class="line-numbers"><code class="language-html">&lt;router-outlet&gt;&lt;/router-outlet&gt;</code></pre></div><p>Importer le <code>AppRoutingModule</code> dans l&#39;application</p>
+<div><pre class="line-numbers"><code class="language-javascript">import { AppRoutingModule } from &#39;./app-routing.module&#39;;</code></pre></div><p><strong>L&#39;ordre des routes compte: le AppRoutingModule doit être appelé en dernier dans AppModule-&gt;import, idem pour le `</strong>`**</p>
+<p>Pour créer un lien:</p>
+<div><pre class="line-numbers"><code class="language-html">&lt;a routerLink=&quot;login&quot;&gt;</code></pre></div><p>Ajouter une classe à un lien actif:</p>
+<div><pre class="line-numbers"><code class="language-html">&lt;a routerLink=&quot;login&quot; routerLinkActive=&quot;active&quot;&gt;</code></pre></div><p>Ajouter un paramètre à un lien:</p>
+<div><pre class="line-numbers"><code class="language-html">&lt;a [routerLink]=&quot;[&#39;login&#39;, myVar.id]&quot;&gt;</code></pre></div><h3 id="lazyloading">LazyLoading</h3>
+<p>Demander au router de charger les modules à l&#39;appel et non au chargement de l&#39;application</p>
+<p>Dans le fichier <code>AppRoutingModule</code>, ajouter:</p>
+<div><pre class="line-numbers"><code class="language-javascript">{
+  path: &#39;prestations&#39;,
+  loadChildren: &#39;./prestations/prestations.module#PrestationsModule&#39;,
+},</code></pre></div><p><strong>Attention: Le Module ne doit pas avoir été importé aileurs auparavant</strong></p>
+<p><strong>/!\ Si bien fait: Le Module importé doit s&#39;afficher dans la liste d&#39;url affichée dans la console, sinon, vérifer le contenu de loadChildren</strong></p>
+<h3 id="routing-child">Routing Child</h3>
+<p>Permet de gérer les routes pour chaque module</p>
+<p>Créer un composant dans le module visé</p>
+<div><pre class="line-numbers"><code class="language-bash">ng g component [component-name] --module=[module-name]</code></pre></div><p>Créer un module routing <strong>dans</strong> le module visé, en prenant soin de </p>
+<div><pre class="line-numbers"><code class="language-bash">ng g module [module-name] --module=[module-name]</code></pre></div><p>Recopier, dans le nouveau fichier routing, le contenu du <code>AppRoutingModule</code>, en utilisant <code>forChild</code> plutôt que <code>forRoot</code></p>
+<div><pre class="line-numbers"><code class="language-javascript">&#64;NgModule({
+  imports: [
+    RouterModule.forChild(
+      appRoutes
+    )
+  ]
+})</code></pre></div><p>Dans le fichier AppRouting, ajouter une redirection vers le module</p>
+<div><pre class="line-numbers"><code class="language-javascript">  {
+    path: &#39;clients&#39;,
+    loadChildren: &#39;./clients/clients.module#ClientsModule&#39;,
+  },</code></pre></div><p>Importer le fichier routing-child dans le module correspondant</p>
+<div><pre class="line-numbers"><code class="language-javascript">import { ClientsRoutingModule } from &#39;./clients-routing.module&#39;;</code></pre></div><h3 id="404">404</h3>
+<p>Pour récupérer toutes les URLs inconnues, utiliser dans le path: **</p>
+<div><pre class="line-numbers"><code class="language-javascript">  {
+    path: &#39;**&#39;,
+    loadChildren: &#39;./page-not-found/page-not-found.module#PageNotFoundModule&#39;,
+  },</code></pre></div><h3 id="guard">Guard</h3>
+<p><strong>À venir</strong></p>
+<h2 id="injection-de-d-pendances">Injection de dépendances</h2>
+<p>shared &gt; schematics &gt; services &gt; &quot;prestation&quot; </p>
+<h2 id="pipe">Pipe</h2>
+<p>Permet de formater une variable pour l&#39;affichage</p>
+<h2 id="formulaires">Formulaires</h2>
+<p>[value]=&quot;content&quot; =&gt; pour binder une variable
+value=&quot;content&quot; =&gt; pour écrire du texte</p>
+<h3 id="liens">Liens</h3>
+<p>Objet <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Set">Set</a>
+Objet <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/values">Values</a></p>
+<p>Dans Shared, création d&#39;un dossier <code>components</code></p>
+<p>###Transclusion: pouvoir projeter un template dans un autre template:</p>
+<p>Tout le code contenu de <code>app-prestation</code>...</p>
+<div><pre class="line-numbers"><code class="language-html">&lt;app-tableau&gt;
+  &lt;app-prestation&gt;&lt;/app-prestation&gt;
+&lt;/app-tableau&gt;</code></pre></div><p>... sera exécuté à l&#39;emplacement de la balise <code>ng-content</code></p>
+<div><pre class="line-numbers"><code class="language-html">&lt;ng-content&gt;&lt;/ng-content&gt;</code></pre></div><p>###Tranclusion multiple</p>
+<p>On ajoute autant de contenu que l&#39;on souhaite...</p>
+<div><pre class="line-numbers"><code class="language-html">&lt;app-tableau&gt;
+  &lt;app-prestation&gt;&lt;/app-prestation&gt;
+  &lt;p&gt;coucou&lt;/p&gt;
+  &lt;p class=&quot;en&quot;&gt;hello&lt;/p&gt;
+&lt;/app-tableau&gt;</code></pre></div><p>On séléctionne via la directive <code>select</code> qui fonctionne comme un sélecteur CSS</p>
+<div><pre class="line-numbers"><code class="language-html">&lt;ng-content&gt;&lt;/ng-content&gt;
+&lt;ng-content select=&quot;p&quot;&gt;&lt;/ng-content&gt;
+&lt;ng-content select=&quot;.paraph&quot;&gt;&lt;/ng-content&gt;</code></pre></div><p><strong>Ne fonctionne pas avec le caractère <code>#</code> pour sélectionner les id</strong></p>
+<p><strong><ng-content> affiche dans le contenu dans le dernier élément</strong></p>
+<p><strong><ng-content select="..."> affiche dans le contenu dans le premier élément</strong></p>
+<p>CSS : retirer le Shadow-DOM</p>
+<p>Dans le composant visé, ajouter, dans le décorateur:</p>
+<div><pre class="line-numbers"><code class="language-javascript">&#64;Component({
+  selector: &#39;app-tableau&#39;,
+  templateUrl: &#39;./tableau.component.html&#39;,
+  styleUrls: [&#39;./tableau.component.scss&#39;],
+  encapsulation: ViewEncapsulation.None //-&gt; Permet l&#39;ouverture des CSS aux autres components (annule le shadow dom)
+})</code></pre></div><p><strong>Attention à bien préciser les éléments CSS pour éviter les effets de bord sur le reste de l&#39;app</strong></p>
+<p>:host =&gt; </p>
+<p>::ng-deep =&gt; </p>
+<h3 id="cr-ation-directive-d-attribut">Création directive d&#39;attribut</h3>
+<h3 id="nommer-un-component">Nommer un component</h3>
+<p>Appliquer un <code>#</code> suivi du nom du composant</p>
+<div><pre class="line-numbers"><code class="language-html">&lt;app-header #header&gt;&lt;/app-header&gt;</code></pre></div><p>À voir : <ng-factory>, création de template dynamique
+<a href="https://toddmotto.com/factory-versus-service">Todd Motto</a></p>
+<h2 id="g-n-rer-une-doc">Générer une Doc</h2>
+<p><a href="https://compodoc.app/">Compodoc</a></p>
+<p>installer Compodoc</p>
+<div><pre class="line-numbers"><code class="language-bash">npm install -g &#64;compodoc/compodoc</code></pre></div><p>Ajouter dans le fichier package.json</p>
+<div><pre class="line-numbers"><code class="language-javascript">  &quot;scripts&quot;: {
+    &quot;compodoc&quot;: &quot;compodoc -p src/tsconfig.app.json&quot;
+  }</code></pre></div><p>Lancer la génération de la documentation</p>
+<div><pre class="line-numbers"><code class="language-bash">npm run compodoc</code></pre></div><p>Les commentaires des fonctions sont récupérées dans la documentation</p>
+<div><pre class="line-numbers"><code class="language-javascript">/**
+ * Description
+ * &#64;params $a, $b
+ * &#64;return Var
+ */</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
+            var COMPODOC_CURRENT_PAGE_URL = 'index.html';
+       </script>
+
+       <script src="./js/libs/custom-elements.min.js"></script>
+       <script src="./js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="./js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="./js/menu-wc.js" defer></script>
+
+       <script src="./js/libs/bootstrap-native.js"></script>
+
+       <script src="./js/libs/es6-shim.min.js"></script>
+       <script src="./js/libs/EventDispatcher.js"></script>
+       <script src="./js/libs/promise.min.js"></script>
+       <script src="./js/libs/zepto.min.js"></script>
+
+       <script src="./js/compodoc.js"></script>
+
+       <script src="./js/tabs.js"></script>
+       <script src="./js/menu.js"></script>
+       <script src="./js/libs/clipboard.min.js"></script>
+       <script src="./js/libs/prism.js"></script>
+       <script src="./js/sourceCode.js"></script>
+          <script src="./js/search/search.js"></script>
+          <script src="./js/search/lunr.min.js"></script>
+          <script src="./js/search/search-lunr.js"></script>
+          <script src="./js/search/search_index.js"></script>
+       <script src="./js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

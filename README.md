@@ -284,3 +284,44 @@ Appliquer un `#` suivi du nom du composant
 À voir : <ng-factory>, création de template dynamique
 [Todd Motto](https://toddmotto.com/factory-versus-service)
 
+## Générer une Doc
+
+[Compodoc](https://compodoc.app/)
+
+installer Compodoc
+```bash
+npm install -g @compodoc/compodoc
+```
+
+Ajouter dans le fichier package.json
+```javascript
+  "scripts": {
+    "compodoc": "compodoc -p src/tsconfig.app.json"
+  }
+```
+
+Lancer la génération de la documentation
+```bash
+npm run compodoc
+```
+
+Les commentaires des fonctions sont récupérées dans la documentation
+```javascript
+/**
+ * Description
+ * @params $a, $b
+ * @return Var
+ */
+```
+
+## Formulaires
+
+Observable: (design pattern) | (unicast)
+Permet de récupérer des données et exécuter des actions de manière asynchrone
+Tant qu'on n'y a pas souscrit, aucune action ne se passe ni requête ajax
+Observable chaud: permet de récupérer les données et de rester souscrit au flux
+Observable froid: permet de récupérer les données, pour mettre à jour, on doit souscrire à nouveau
+=> next: permet d'ajouter des données dans l'observer
+=> complete(): permet d'envoyer les données
+
+Subject: (multicast)

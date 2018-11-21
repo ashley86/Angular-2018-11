@@ -16,6 +16,9 @@ export class ListClientsComponent implements OnInit {
     private ps: ClientService // Injection de dépendance
   ) { }
 
+  /**
+   * Initialisation de la liste client
+   */
   ngOnInit() {
     // Code propre: travailler sur une classe qui appartient
     // à ma classe et non sur l'injection de dépendance

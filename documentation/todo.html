@@ -1,0 +1,188 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>crm documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+	      <link rel="stylesheet" href="./styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="./" class="navbar-brand">crm documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content getting-started">
+                   <div class="content-data">
+
+<p>Todo:
+  ☐ breakpoints et explain bootstrap 4 and grids
+  ☐ grids system and gutters
+  ☐ life cycle hooks</p>
+<p>  ☐ Module 1 : Concepts de base du JavaScript
+  ✔ Principes et fonctionnements @done(18-11-19 17:03)
+  ✔ Variables et types de données @done(18-11-21 09:18)
+  ☐ Opérateurs
+  ☐ Instructions
+  ✔ Structures de contrôles (conditions, boucles...) @done(18-11-21 09:18)
+  ☐ Définition et utilisation de fonctions
+  ☐ Objets prédéfinis(document, window ...)
+  ☐ Contrôle de saisies et traitement de formulaires
+  ☐ Gestion des fenêtres (ouverture, fermeture, communication)
+  ☐ Boîtes de dialogue
+  ☐ Atelier : apprendre à valider un formulaire</p>
+<p>  ✔ Module 2 : ANGULAR 5 - Introduction @done(18-11-21 12:56)
+  ✔ Développement d&#39;applications riches @done(18-11-19 17:03)
+  ✔ Panorama des frameworks disponibles @done(18-11-19 17:03)
+  ✔ Présentation de l&#39;environnement de développement NodeJS @done(18-11-19 17:03)
+  ✔ Atelier : Installation et mise en route d&#39;un projet Angular @done(18-11-19 17:03)</p>
+<p>  ☐ Module 3 : ES2015
+  ✔ Lien entre Angular et ES2015/TS @done(18-11-19 17:03)
+  ✔ Classes, fondamentaux: constructeur, méthode et gestion de contexte @done(18-11-21 12:56)
+  ☐ Classes, avancés: héritage, méthodes statiques
+  ✔ Opérateurs set et get @done(18-11-21 12:56)
+  ☐ Littéraux de Gabarits
+  ☐ Fonctions fléchées
+  ☐ Variables de bloc</p>
+<p>  ✔ Module 4 : Typescript @done(18-11-21 12:56)
+  ✔ Déclaration de type @done(18-11-21 12:56)
+  ✔ Interface et formes @done(18-11-21 12:56)
+  ✔ Décorateurs @done(18-11-21 12:56)</p>
+<p>  ☐ Module 5 : Première application
+  ☐ Dépendances d&#39;Angular
+  ✔ Déclarer un composant @done(18-11-19 17:04)
+  ✔ Ajouter un gabarit @done(18-11-19 17:04)
+  ✔ Lancer l&#39;application avec un serveur NodeJS @done(18-11-19 17:04)
+  ✔ Re-compiler automatiquement à chaque modification: le veilleur @done(18-11-19 17:04)
+  ✔ Ajouter des données, créer ses classes de modèle @done(18-11-21 12:57)
+  ☐ Lier une donnée au gabarit, expressions et opérateur «moustache»
+  ✔ Gérer des collections, directive *ngFor @done(18-11-21 12:57)
+  ✔ Atelier : Création d&#39;une première application @done(18-11-21 12:57)</p>
+<p>  ☐ Module 6 : Formulaire
+  ☐ Liaison des événements d&#39;entrée
+  ✔ L&#39;objet $event @done(18-11-21 12:57)
+  ☐ Variable de référence de gabarit
+  ☐ Créaton de formulaire avec la syntaxe de gabarit
+  ☐ Liaison de données à double sens
+  ☐ Suivre et valider les saisies utilisateur avec ngControl
+  ☐ Soumettre le formulaire avec ngSubmit
+  ☐ Atelier : Gestion des entrées utilisateurs</p>
+<p>  ☐ Module 7 : Injection de dépendances
+  ✔ Principes de DI @done(18-11-21 12:57)
+  ☐ Configurer l&#39;injecteur
+  ☐ Enregistrer des fournisseurs dans un composant
+  ☐ Création de l&#39;injecteur
+  ☐ Différents types de fournisseurs: classe, valeur, fabrique...
+  ✔ Atelier : Architecturer notre application sous forme d&#39;une organisation de services @done(18-11-21 12:58)</p>
+<p>  ☐ Module 8 : La Syntaxe de gabarit en détail
+  ☐ Interpollation, expression et instruction
+  ☐ Syntaxe de liaison: sens unique, double sens, cibles de liaison
+  ☐ Directives natives: NgClass, NgStyle, NgIf, NgSwitch, NgFor
+  ☐ Propriétés d&#39;entrée et de sortie
+  ☐ Opérateurs d&#39;expression de gabarit «|» et «?.»</p>
+<p>  ☐ Module 9 : Le client HTTP
+  ☐ Principe de communication asynchrone
+  ☐ Récupérer des données avec http.get
+  ☐ Observable RxJS
+  ☐ Prise en charge du transport JSON
+  ☐ Gestion des erreurs
+  ☐ Envoi de données au serveur
+  ☐ Fonctionnement des promesses
+  ☐ Sources externes: CORS
+  ☐ Atelier : Mettre en place un client d&#39;API ReST</p>
+<p>  ☐ Module 10 : Routage
+  ✔ Routage côté client, hashtag et HTML5 @done(18-11-21 12:58)
+  ✔ Configuration des routes sur un composant @done(18-11-21 12:58)
+  ☐ Récupérer des paramètres de routes
+  ☐ Stratégie de routes
+  ✔ Routes imbriquées @done(18-11-21 12:58)
+  ☐ Atelier : Mettre en place une application multi-vues</p>
+<p>  ☐ Module 11 : Tester l&#39;application
+  ☐ Fondamentaux des tests avec Jasmine
+  ☐ Automatisation des tests avec Karma
+  ☐ Tester des composants simples
+  ☐ Tester des composants avec services asynchrones
+  ☐ Tester des formulaires
+  ☐ Atelier : Multiples exemples de tests</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
+            var COMPODOC_CURRENT_PAGE_URL = 'todo.html';
+       </script>
+
+       <script src="./js/libs/custom-elements.min.js"></script>
+       <script src="./js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="./js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="./js/menu-wc.js" defer></script>
+
+       <script src="./js/libs/bootstrap-native.js"></script>
+
+       <script src="./js/libs/es6-shim.min.js"></script>
+       <script src="./js/libs/EventDispatcher.js"></script>
+       <script src="./js/libs/promise.min.js"></script>
+       <script src="./js/libs/zepto.min.js"></script>
+
+       <script src="./js/compodoc.js"></script>
+
+       <script src="./js/tabs.js"></script>
+       <script src="./js/menu.js"></script>
+       <script src="./js/libs/clipboard.min.js"></script>
+       <script src="./js/libs/prism.js"></script>
+       <script src="./js/sourceCode.js"></script>
+          <script src="./js/search/search.js"></script>
+          <script src="./js/search/lunr.min.js"></script>
+          <script src="./js/search/search-lunr.js"></script>
+          <script src="./js/search/search_index.js"></script>
+       <script src="./js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<div class="container">
+  <form novalidate>
+
+    <div class="form-group">
+      <label for="type">Email address</label>
+      <input type="email" class="form-control" id="type">
+    </div>
+
+    <div class="form-group">
+      <label for="Client">Client</label>
+      <input type="text" class="form-control" id="Client">
+    </div>
+
+    <div class="form-group">
+      <label for="nbjours">nbjours</label>
+      <input type="number" class="form-control" id="nbjours">
+    </div>
+
+    <div class="form-group">
+      <label for="tjmht">tjmht</label>
+      <input type="number" class="form-control" id="tjmht">
+    </div>
+
+    <div class="form-group">
+      <label for="tva">tva</label>
+      <input type="number" class="form-control" id="tva">
+    </div>
+
+    <div class="form-group">
+      <label for="state">state</label>
+      <select class="form-control" id="state">
+        <option *ngFor="let state of states" [value]="state">{{state}}</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+  </form>
+</div>
