@@ -202,3 +202,50 @@ shared > schematics > services > "prestation"
 
 ## Pipe
 Permet de formater une variable pour l'affichage
+
+## Formulaires
+[value]="content" => pour binder une variable
+value="content" => pour écrire du texte
+
+### Liens
+Objet [Set](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Set)
+Objet [Values](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/values)
+
+Dans Shared, création d'un dossier `components`
+
+Transclusion: pouvoir projeter un template dans un autre template:
+
+Tout le code contenu de `app-prestation`...
+```html
+<app-tableau>
+  <app-prestation></app-prestation>
+</app-tableau>
+```
+
+... sera exécuté à l'emplacement de la balise `ng-content`
+```html
+<ng-content></ng-content>
+```
+
+Tranclusion multiple
+
+On ajoute autant de contenu que l'on souhaite...
+```html
+<app-tableau>
+  <app-prestation></app-prestation>
+  <p>coucou</p>
+  <p class="en">hello</p>
+</app-tableau>
+```
+
+On séléctionne via la directive `select` qui fonctionne comme un sélecteur CSS
+```html
+<ng-content></ng-content>
+<ng-content select="p"></ng-content>
+<ng-content select=".paraph"></ng-content>
+```
+**Ne fonctionne pas avec le caractère `#` pour sélectionner les id**
+
+**<ng-content> affiche dans le contenu dans le dernier élément**
+
+**<ng-content select="..."> affiche dans le contenu dans le premier élément**

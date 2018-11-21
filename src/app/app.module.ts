@@ -1,4 +1,4 @@
-import { LOCALE_ID, NgModule } from '@angular/core'; // LOCALE_ID: Utiliser les euros pour transformer une valeur
+import { NgModule, LOCALE_ID } from '@angular/core'; // LOCALE_ID: Utilisé les euros pour transformer une valeur
 import { registerLocaleData } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';

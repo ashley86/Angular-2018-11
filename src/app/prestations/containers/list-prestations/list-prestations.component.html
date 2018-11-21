@@ -1,12 +1,4 @@
-<div class="table-responsive">
-  <table class="table table-striped table-hover table-dark">
-    <thead>
-      <tr>
-        <th *ngFor="let item of headers">{{ item | titlecase }}</th>
-      </tr>
-    </thead>
-    <tbody>
-      <app-prestation *ngFor="let obj of collection" [item]="obj"></app-prestation>
-    </tbody>
-  </table>
-</div>
+<app-tableau [headers]="headers">
+  <app-prestation *ngFor="let obj of collection" [item]="obj"></app-prestation>
+  <p>coucou</p>
+</app-tableau>

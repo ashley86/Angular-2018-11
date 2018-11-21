@@ -11,5 +11,12 @@
       <td>{{ item.totalHt() | currency:'EUR':true }}</td> -->
     <td>{{ item | total | currency: 'EUR' }}</td>
     <td>{{ item | total: item.tauxTva | currency: 'EUR' }}</td>
-    <td>{{ item.state }}</td>
+    <td>
+      <select (change)="changeState($event)">
+        <option [value]="item.state">{{ item.state }}</option>
+        <ng-container *ngFor="let state of states">
+          <option *ngIf="item.state !== state" [value]="state">{{ state }}</option>
+        </ng-container>
+      </select>
+    </td>
   </tr>

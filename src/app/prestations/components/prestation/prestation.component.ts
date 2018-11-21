@@ -1,5 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { State } from 'src/app/shared/enums/state.enum';
 import { Prestation } from 'src/app/shared/models/prestation.model';
+import { PrestationService } from '../../services/prestation.service';
 
 @Component({
   selector: 'app-prestation',
@@ -10,11 +12,18 @@ export class PrestationComponent implements OnInit {
 
   // Permet au parent de remplir cette variable
   @Input() item: Prestation;
+  public states = Object.values(State);
 
-  constructor() {}
+  constructor(
+    private ps: PrestationService
+  ) {}
 
   ngOnInit() {
-    console.log(this.item);
+  }
+
+  public changeState(event) {
+    const state = event.target.value;
+    this.ps.update(this.item, state);
   }
 
 }

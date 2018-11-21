@@ -6,10 +6,10 @@ Todo:
 
   ☐ Module 1 : Concepts de base du JavaScript
   ✔ Principes et fonctionnements @done(18-11-19 17:03)
-  ☐ Variables et types de données
+  ✔ Variables et types de données @done(18-11-21 09:18)
   ☐ Opérateurs
   ☐ Instructions
-  ☐ Structures de contrôles (conditions, boucles...)
+  ✔ Structures de contrôles (conditions, boucles...) @done(18-11-21 09:18)
   ☐ Définition et utilisation de fonctions
   ☐ Objets prédéfinis(document, window ...)
   ☐ Contrôle de saisies et traitement de formulaires
