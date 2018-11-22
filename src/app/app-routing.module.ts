@@ -17,6 +17,10 @@ const appRoutes: Routes = [
     path: 'clients',
     loadChildren: './clients/clients.module#ClientsModule',
   },
+  {
+    path: 'fournisseurs',
+    loadChildren: './fournisseurs/fournisseurs.module#FournisseursModule',
+  },
   { // 404
     path: '**',
     loadChildren: './page-not-found/page-not-found.module#PageNotFoundModule',

@@ -12,6 +12,7 @@ import { UiModule } from './ui/ui.module';
 // Utiliser les euros pour transformer une valeur
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
+import { FournisseursModule } from './fournisseurs/fournisseurs.module';
 registerLocaleData(localeFr);
 
 @NgModule({
@@ -25,7 +26,8 @@ registerLocaleData(localeFr);
     NgbModule.forRoot(), // Importation NG-Bootstrap
     AppRoutingModule, // Importation du routing
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    FournisseursModule
   ],
   providers: [
     {

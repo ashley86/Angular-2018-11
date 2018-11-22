@@ -1,0 +1,4 @@
+<app-tableau [headers]="headers">
+  <app-fournisseur *ngFor="let obj of collection$ | async" [item]="obj"></app-fournisseur>
+</app-tableau>
+<app-add-row texte="Ajouter un fournisseur"></app-add-row>

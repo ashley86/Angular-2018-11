@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { State } from 'src/app/shared/enums/state.enum';
 import { Prestation } from 'src/app/shared/models/prestation.model';
 import { PrestationService } from '../../services/prestation.service';
-import { faTrash, faEdit } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-prestation',

@@ -4,10 +4,10 @@
   .state-annule, .state-inactif {
     background: $palette-color-two;
   }
-  .state-option {
+  .state-option, .state-societe {
     background: $palette-color-three;
   }
-  .state-confirme, .state-actif {
+  .state-confirme, .state-actif, .state-independant {
     background: $palette-color-four;
   }
 }

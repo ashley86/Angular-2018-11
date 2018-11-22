@@ -1,0 +1,14 @@
+<tr>
+  <td>{{ item.id }}</td>
+  <td>{{ item.nom }}</td>
+  <td>{{ item.tel }}</td>
+  <td>{{ item.adresse }}</td>
+  <td [appState]="item.stateFournisseur">
+    <select name="stateFournisseur" (change)="changeStateFournisseur($event)" [(ngModel)]="item.stateFournisseur">
+      <option *ngFor="let stateFournisseur of statesFournisseur" [value]="stateFournisseur">{{ stateFournisseur }}</option>
+    </select>
+  </td>
+  <td>
+    <a (click)="deleteFournisseur(item)"><fa-icon [icon]="faTrash"></fa-icon></a>
+  </td>
+</tr>
