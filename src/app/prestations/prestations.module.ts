@@ -20,8 +20,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     PrestationComponent,
     PageAddPrestationComponent,
     AddPrestationComponent,
-    FormPrestationComponent,
-    ReactiveFormPrestationComponent
+    FormPrestationComponent, // soit form, soit reactive form
+    ReactiveFormPrestationComponent // soit form, soit reactive form
   ],
   imports: [
     CommonModule,

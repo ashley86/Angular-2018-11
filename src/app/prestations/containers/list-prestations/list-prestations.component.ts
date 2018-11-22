@@ -1,7 +1,7 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Prestation } from 'src/app/shared/models/prestation.model';
 import { PrestationService } from '../../services/prestation.service';
-import { Subscription, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-list-prestations',
