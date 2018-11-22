@@ -1,8 +1,13 @@
 <div class="d-flex align-items-center header">
 
   <div>
-    <span (click)="open = !open">
-      <fa-icon [icon]="faBars"></fa-icon>
+    <span (click)="toggleMenu()">
+      <fa-icon [icon]="burgerIcon"></fa-icon>
+      <!--
+        Old way:
+        <fa-icon *ngIf="!open" [icon]="faBars"></fa-icon>
+        <fa-icon *ngIf="open" [icon]="faTimes"></fa-icon>
+      -->
     </span>
   </div>
 

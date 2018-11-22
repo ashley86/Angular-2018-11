@@ -1,10 +1,13 @@
 <header class="fixed-top">
+  <!-- le paramètre #header permet d'accéder à toutes les propriétés et méthodes contenu dans le composant `<app-header>` -->
   <app-header #header></app-header>
 </header>
 
+<!-- Ajoute la classe `close-aside` dans le cas où la propriété `open` du composant `<app-header>` vaut `false` -->
 <main [ngClass]="{'close-aside': header.open === false}">
 
-  <div class="shadow position-fixed" (click)="header.open = !header.open"></div>
+  <!-- Fait appel à la méthode `toggleMenu()` du composant `<app-header>` -->
+  <div class="shadow position-fixed" (click)="header.toggleMenu()"></div>
 
   <aside>
     <div class="scroller">
@@ -15,6 +18,7 @@
   <div class="page">
 
     <div class="contents">
+      <!-- Permet d'insérer le module appelé par le router -->
       <router-outlet></router-outlet>
     </div>
 

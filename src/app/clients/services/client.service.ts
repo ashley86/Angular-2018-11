@@ -30,6 +30,10 @@ export class ClientService {
   }
 
   // add item in collection
+  public add(item: Client) {
+    // Faire attention à retour un objet Client, sinon nous n'aurons pas accès aux méthodes du modèle
+    this.collection.push(new Client(item)); // sans utiliser le `_` , on fait appel à la méthode magique `set`
+  }
 
   // update item in collection
   public update(item: Client, state: StateClient) {
