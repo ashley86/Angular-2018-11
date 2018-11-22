@@ -492,3 +492,39 @@ export const environment = {
 * Mode test
 * Ajouter une collection `prestations`
 * Ajouter les champs (valeurs / type)
+
+
+## RxJS
+
+Subject
+BehaviorSubject: récupère le dernier
+ReplaySubject: Récupère TOUT
+AsyncSubject: ... comme subject ?
+
+méthode `from` : https://rxjs-dev.firebaseapp.com/api/index/function/from
+méthode `of`: https://rxjs-dev.firebaseapp.com/api/index/function/of
+méthode `from`
+
+Opérators sert à travailler sur les données émis par les Observable, utilisable avec les pipes
+
+opérateur `map`: 
+
+
+## Change Detection
+
+Gère la mise à jour de la vue
+Par défaut, véréfie les changements sur tous les composants de l'application
+
+CD s'active dans le cas où:
+- EVENT
+- valeur d'un Input est mis à jour
+- le flux d'un Observable est modifié
+
+Depuis le point le plus haut
+```javascript
+import { ChangeDetectionStrategy } from '@angular/core';
+@Component({
+  // Oblige de créer un event pour mettre à jour les données
+  changeDetection: ChangeDetectionStrategy.OnPush
+});
+```

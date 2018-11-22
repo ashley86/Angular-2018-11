@@ -1,3 +1,6 @@
+/**
+ * Ne pas versionner ce fichier pour éviter de versionner les données confidentielles
+ */
 export const environment = {
   production: true,
   firebase: {
