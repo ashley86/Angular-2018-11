@@ -8,8 +8,6 @@
 # dependencies
 /node_modules
 
-/src/environments/environment.firebase.ts
-
 # IDEs and editors
 /.idea
 .project
@@ -39,3 +37,4 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+src/environments/environment.firebase.ts
