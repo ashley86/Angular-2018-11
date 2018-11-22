@@ -78,6 +78,8 @@ export class ClientService {
 
   // get item by id
   getClient(id: string): Observable<Client> {
+    console.log('getClient', this.itemsCollection.doc<Client>(id).valueChanges());
+
     return this.itemsCollection.doc<Client>(id).valueChanges();
   }
 }

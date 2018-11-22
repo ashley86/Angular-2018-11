@@ -11,7 +11,7 @@
     </select>
   </td>
   <td>
-    <a (click)="deleteClient(item)"><fa-icon [icon]="faTrash"></fa-icon></a>
-    <a (click)="deleteClient(item)"><fa-icon [icon]="faEdit"></fa-icon></a>
+    <!-- <a (click)="deleteClient(item)"><fa-icon [icon]="faTrash"></fa-icon></a> -->
+    <a [routerLink]="['edit', item.id]" routerLinkActive="router-link-active" ><fa-icon [icon]="faEdit"></fa-icon></a>
   </td>
 </tr>
