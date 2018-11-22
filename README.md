@@ -338,7 +338,157 @@ Liste des status de champs: https://angular.io/api/forms/FormGroup
 
 ### Reactive Forms
 
-```html
-<form [formGroup]="">
-  <input [formControl]="">
+Pour créer un formulaire Réactif (Reactive Forms)
+
+Importer le module reactive forms dans le module du formulaire
+```javascript
+import { ReactiveFormsModule } from '@angular/forms';
+@NgModule({
+  imports: [
+    ReactiveFormsModule
+  ]
+});
 ```
+
+Dans le composant du formulaire
+
+Instancier le formulaire
+```javascript
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+
+public form: FormGroup;
+
+constructor(
+  private fb: FormBuilder
+) { }
+```
+
+Importer le modèle associé
+```javascript
+import { Client } from 'src/app/shared/models/client.model';
+```
+
+Paramétrer le formulaire
+```javascript
+private init = new Client; // Modèle de données associé
+
+// Champs du formulaire et Validators
+private createForm() {
+  this.form = this.fb.group({
+      nom: [ // nom du `formControlName`
+        this.init.nom,
+      ],
+  });
+}
+
+// Fonction appelée lors de la validation du formulaire
+public onSubmit() {
+  this.nItem.emit(this.form.value);
+}
+
+// Fonction appelée quand on quitte le champ
+public isError(fcName): boolean {
+  return this.form.get(fcName).invalid && this.form.get(fcName).touched;
+}
+```
+
+Dans la vue du formulaire
+```html
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <input type="text" class="form-control" formControlName="nom">
+```
+
+Pour effectuer avoir un formulaire asynchrone, dans le composant du formulaire
+```javascript
+import { Output, EventEmitter } from '@angular/core';
+
+@Output() nItem: EventEmitter<Client> = new EventEmitter();
+
+public onSubmit() {
+  this.nItem.emit(this.form.value);
+}
+```
+
+Dans la page HTML appelant le composant du formulaire
+```html
+<app-reactive-form-client (nItem)="add($event)"></app-reactive-form-client>
+```
+
+## Firebase
+Créer un projet
+
+Développer > Hosting > Premier pas
+
+Exécuter
+```bash
+npm install -g firebase-tools
+```
+
+Bien se positionner dans le dossier du projet, puis se connecter
+```bash
+firebase login
+```
+
+Builder l'application
+```bash
+ng build --prod
+```
+Cela doit créer un dossier dist à la racine du projet
+
+**Si bug lors du build avec @ngBootstrap :**
+Remplacer la version de @ngBootstrap dans package.json
+```javascript
+"@ng-bootstrap/ng-bootstrap": "^3.3.1",
+```
+puis exécuter
+```bash
+npm install @ng-bootstrap/ng-bootstrap
+```
+**FIN BUG**
+
+Initialiser firebase dans le projet
+```bash
+firebase init
+```
+
+* Sélectionner `Hosting`
+* Sélectionner le projet concerné (si problème pour trouver le projet: firebase use --add)
+* Choisir le dossier `dist/crm`: `dist` correspond au build, `crm` au nom du projet (chemin modifiable par la suite)
+* SPA ? Oui
+* Overwrite ? Nope
+
+Déployer sur firebase
+```bash
+firebase deploy
+```
+
+[AngularFire](https://github.com/angular/angularfire2)
+
+Pouvoir se utiliser les services Firebase dans son application
+
+Exécuter 
+```bash
+npm install @angular/fire firebase --save
+```
+
+Créer un fichier `src/environments/environments.firebase.ts` (ignoré dans le .gitignore)
+```javascript
+export const environment = {
+  production: true,
+  firebase: {
+    apiKey: '<your-key>',
+    authDomain: '<your-project-authdomain>',
+    databaseURL: '<your-database-URL>',
+    projectId: '<your-project-id>',
+    storageBucket: '<your-storage-bucket>',
+    messagingSenderId: '<your-messaging-sender-id>'
+  }
+};
+```
+
+# Databse
+
+* Créer une base de données
+* Mode test
+* Ajouter une collection `prestations`
+* Ajouter les champs (valeurs / type)
