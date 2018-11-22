@@ -29,6 +29,10 @@ export class PrestationService {
   }
 
   // add item in collection
+  public add(item: Prestation) {
+    console.log('prout', item);
+    this.collection.push(item); // sans utiliser le `_` , on fait appel à la méthode magique `set`
+  }
 
   // update item in collection
   public update(item: Prestation, state: State) {
