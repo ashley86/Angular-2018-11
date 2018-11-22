@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Client } from 'src/app/shared/models/client.model';
 import { ClientService } from '../../services/client.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-list-clients',
@@ -9,11 +10,11 @@ import { ClientService } from '../../services/client.service';
 })
 export class ListClientsComponent implements OnInit {
 
-  public collection: Client[];
+  public collection$: Observable<Client[]>;
   public headers: String[];
 
   constructor(
-    private ps: ClientService // Injection de dépendance
+    private cs: ClientService // Injection de dépendance
   ) { }
 
   /**
@@ -22,10 +23,10 @@ export class ListClientsComponent implements OnInit {
   ngOnInit() {
     // Code propre: travailler sur une classe qui appartient
     // à ma classe et non sur l'injection de dépendance
-    this.collection = this.ps.collection;
+    this.collection$ = this.cs.collection$;
 
     // Défini les colonnes du tableau qui sera affiché
-    this.headers = ['id', 'Nom', 'E-mail', 'État'];
+    this.headers = ['id', 'Nom', 'E-mail', 'État', 'Actions'];
   }
 
 }

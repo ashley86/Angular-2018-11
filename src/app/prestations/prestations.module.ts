@@ -11,6 +11,7 @@ import { PageAddPrestationComponent } from './pages/page-add-prestation/page-add
 import { PagePrestationsComponent } from './pages/page-prestations/page-prestations.component';
 import { PrestationsRoutingModule } from './prestations-routing.module';
 import { ReactiveFormPrestationComponent } from './components/reactive-form-prestation/reactive-form-prestation.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ReactiveFormPrestationComponent } from './components/reactive-form-pres
     TemplateModule,
     FormsModule,
     ReactiveFormsModule, // Permet d'utiliser les reactive forms
+    FontAwesomeModule,
   ]
 })
 export class PrestationsModule { }

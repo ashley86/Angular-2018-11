@@ -19,8 +19,10 @@ export class AddPrestationComponent implements OnInit {
   }
 
   public add(item: Prestation) {
-    this.ps.add(item);
-    this.router.navigate(['prestations', /*arguments in second params*/]);
+    this.ps.add(item).then((data) => {
+      // en fonction du retour de l'api, on peut rediriger
+      this.router.navigate(['prestations', /*arguments in second params*/]);
+    });
   }
 
 }

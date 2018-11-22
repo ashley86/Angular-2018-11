@@ -528,3 +528,9 @@ import { ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 });
 ```
+
+ `| async` plus besoin de `subscribe` ou `unsubscribe`
+
+
+## Créer une collection pour client
+## Ajouter une colonne pour éditer ou supprimer une ligne

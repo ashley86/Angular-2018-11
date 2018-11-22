@@ -19,7 +19,12 @@ export class PageAddClientComponent implements OnInit {
   }
 
   public add(item: Client) {
-    this.cs.add(item);
-    this.router.navigate(['clients', /*arguments in second params*/]);
+    // this.cs.add(item);
+    // this.router.navigate(['clients', /*arguments in second params*/]);
+
+    this.cs.add(item).then((data) => {
+      // en fonction du retour de l'api, on peut rediriger
+      this.router.navigate(['clients', /*arguments in second params*/]);
+    });
   }
 }

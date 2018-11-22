@@ -9,6 +9,7 @@ import { ReactiveFormClientComponent } from './components/reactive-form-client/r
 import { ListClientsComponent } from './containers/list-clients/list-clients.component';
 import { PageAddClientComponent } from './pages/page-add-client/page-add-client.component';
 import { PageClientsComponent } from './pages/page-clients/page-clients.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [PageClientsComponent, ListClientsComponent, ClientComponent, PageAddClientComponent, ReactiveFormClientComponent],
@@ -17,7 +18,8 @@ import { PageClientsComponent } from './pages/page-clients/page-clients.componen
     ClientsRoutingModule,
     SharedModule,
     TemplateModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FontAwesomeModule
   ]
 })
 export class ClientsModule { }

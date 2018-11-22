@@ -5,9 +5,13 @@
   <td [appState]="item.stateClient">
     <select (change)="changeState($event)">
       <option [value]="item.stateClient">{{ item.stateClient }}</option>
-      <ng-container *ngFor="let state of states">
+      <ng-container *ngFor="let state of statesClients">
         <option *ngIf="item.stateClient !== state" [value]="state">{{ state }}</option>
       </ng-container>
     </select>
+  </td>
+  <td>
+    <a (click)="deleteClient(item)"><fa-icon [icon]="faTrash"></fa-icon></a>
+    <a (click)="deleteClient(item)"><fa-icon [icon]="faEdit"></fa-icon></a>
   </td>
 </tr>

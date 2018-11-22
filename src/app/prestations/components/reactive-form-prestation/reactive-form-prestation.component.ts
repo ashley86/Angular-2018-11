@@ -58,14 +58,13 @@ export class ReactiveFormPrestationComponent implements OnInit {
         Validators.compose([ // Validators multiple
           Validators.required,
           Validators.pattern('([0-9]+)'),
-          Validators.minLength(3)
+          Validators.minLength(2)
         ])
       ],
       state: [
         this.init.state,
         Validators.compose([ // Validators multiple
-          Validators.required,
-          Validators.pattern('([0-9]+)')
+          Validators.required
         ])
       ],
     });
