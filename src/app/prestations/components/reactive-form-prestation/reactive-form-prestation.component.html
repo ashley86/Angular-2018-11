@@ -1,0 +1,45 @@
+<div class="container">
+
+    <form novalidate [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="type">Type</label>
+        <input type="text" class="form-control" id="type" formControlName="typePresta">
+        <div class="alert alert-danger" *ngIf="isError('typePresta')">Champ invalide</div>
+      </div>
+
+      <div class="form-group">
+        <label for="client">Client</label>
+        <input type="text" class="form-control" id="client" formControlName="client">
+        <div class="alert alert-danger" *ngIf="isError('client')">Champ invalide</div>
+      </div>
+
+      <div class="form-group">
+        <label for="nbjours">Nb jours</label>
+        <input type="text" class="form-control" id="nbjours" formControlName="nbJours">
+        <div class="alert alert-danger" *ngIf="isError('nbJours')">Champ invalide</div>
+      </div>
+
+      <div class="form-group">
+        <label for="tjmht">Tjm HT</label>
+        <input type="number" class="form-control" id="tjmht" formControlName="tjmHt">
+        <div class="alert alert-danger" *ngIf="isError('tjmHt')">Champ invalide</div>
+      </div>
+
+      <div class="form-group">
+        <label for="tva">TVA</label>
+        <input type="number" class="form-control" id="tva" formControlName="tauxTva">
+        <div class="alert alert-danger" *ngIf="isError('tauxTva')">Champ invalide</div>
+      </div>
+
+      <div class="form-group">
+        <label for="state">State</label>
+        <select class="form-control" id="state" formControlName="state">
+          <option *ngFor="let state of states" [value]="state">{{ state }}</option>
+        </select>
+        <div class="alert alert-danger" *ngIf="isError('state')">Champ invalide</div>
+      </div>
+
+      <button [disabled]="form.invalid" type="submit" class="btn btn-primary">Submit</button>
+
+    </form>
+  </div>

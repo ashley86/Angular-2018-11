@@ -215,6 +215,12 @@ value="content" => pour écrire du texte
 ### Liens
 Objet [Set](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Set)
 Objet [Values](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/values)
+[Web Components](https://developer.mozilla.org/fr/docs/Web/Web_Components)
+[Decorators](https://medium.com/google-developers/exploring-es7-decorators-76ecb65fb841)
+[BabelJs](https://babeljs.io/)
+[Webpack (alsacreations)](https://www.alsacreations.com/tuto/lire/1754-debuter-avec-webpack.html)
+[Babel (grafikArt)](https://www.grafikart.fr/tutoriels/babel-es2015-907)
+
 
 Dans Shared, création d'un dossier `components`
 
@@ -328,3 +334,11 @@ Subject: (multicast)
 
 
 Liste des status de champs: https://angular.io/api/forms/FormGroup
+
+
+### Reactive Forms
+
+```html
+<form [formGroup]="">
+  <input [formControl]="">
+```

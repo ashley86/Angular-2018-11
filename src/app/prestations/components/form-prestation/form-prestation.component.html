@@ -1,38 +1,44 @@
 <div class="container">
 
-  <!-- le ngForm permet d'initialiser un formGroup ici -->
+  <!-- le ngForm permet d'initialiser un formGroup ici, dans la variable #form (on aurait pu aussi écrire #toto) -->
+  <!-- (ngSubmit) écoute la validation du formulaire et appelera la fonction onSubmit() -->
+  <!-- Étant donné qu'on a créé la variable `init` en tant qu'objet `Prestation`,
+       on peut utiliser tous les paramètres de l'objet `Prestation` -->
+  <!-- another way: <form novalidate #form="ngForm" (ngSubmit)="onSubmit()"> -->
   <form novalidate #form="ngForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="type">Type</label>
       <!-- two way data binding: permet de faire du data binding ET de l'event binding, d'où les crochets (data) suivis de parenthèses (event)-->
-      <input [(ngModel)]="init.typePresta" required name="type" type="text" class="form-control" id="type" #type="ngModel">
-      {{ init.typePresta }}
-      <div class="alert alert-danger" *ngIf="type.invalid && type.touched">Champ invalide</div>
+      <!-- Another way: <input [(ngModel)]="init.typePresta" required name="type" type="text" class="form-control" id="type" #type="ngModel"> -->
+      <input type="text" class="form-control" id="type">
+      <!-- Sert à montrer le two way data binding {{ init.typePresta }} -->
+      <div class="alert alert-danger" *ngIf="">Champ invalide</div>
     </div>
 
     <div class="form-group">
       <label for="client">Client</label>
-      <input [(ngModel)]="init.client" required minlength="3" name="client" type="text" class="form-control" id="client">
+      <!-- Le validator d'Angular prend en compte les paramètres de validation du HTML. Ex: minLength -->
+      <input type="text" class="form-control" id="client">
     </div>
 
     <div class="form-group">
       <label for="nbjours">Nb jours</label>
-      <input [(ngModel)]="init.nbJours" name="nbjours" type="number" class="form-control" id="nbjours">
+      <input type="number" class="form-control" id="nbjours">
     </div>
 
     <div class="form-group">
       <label for="tjmht">Tjm HT</label>
-      <input [(ngModel)]="init.tjmHt" name="tjmht" type="number" class="form-control" id="tjmht">
+      <input type="number" class="form-control" id="tjmht">
     </div>
 
     <div class="form-group">
       <label for="tva">TVA</label>
-      <input [(ngModel)]="init.tauxTva" name="tva" type="number" class="form-control" id="tva">
+      <input type="number" class="form-control" id="tva">
     </div>
 
     <div class="form-group">
       <label for="state">State</label>
-      <select [(ngModel)]="init.state" name="state" class="form-control" id="state">
+      <select class="form-control" id="state">
         <option *ngFor="let state of states" [value]="state">{{ state }}</option>
       </select>
     </div>

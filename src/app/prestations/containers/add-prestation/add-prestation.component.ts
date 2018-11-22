@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Prestation } from 'src/app/shared/models/prestation.model';
+import { PrestationService } from '../../services/prestation.service';
 
 @Component({
   selector: 'app-add-prestation',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddPrestationComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private ps: PrestationService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
+  }
+
+  public add(item: Prestation) {
+    this.ps.add(item);
+    this.router.navigate(['prestations', /*arguments in second params*/]);
   }
 
 }

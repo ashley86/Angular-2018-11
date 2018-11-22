@@ -8,7 +8,7 @@
     <!--
       <td>{{ item.totalHt() | currency:'EUR':true }}</td>
       Really bad idea: À chaque modification de la vue, la fonction sera appelée autant de fois... Lifecycle
-       Préférer les PIPES |, ils ne rentrent pas dans le cycle de vie et ne sont donc appelés qu'une seule fois
+       Préférer les PIPES `|`, ils ne rentrent pas dans le cycle de vie et ne sont donc appelés qu'une seule fois
     -->
     <td>{{ item | total | currency: 'EUR' }}</td>
     <td>{{ item | total: item.tauxTva | currency: 'EUR' }}</td>

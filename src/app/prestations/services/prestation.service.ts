@@ -30,13 +30,14 @@ export class PrestationService {
 
   // add item in collection
   public add(item: Prestation) {
-    this.collection.push(item); // sans utiliser le `_` , on fait appel à la méthode magique `set`
+    // Faire attention à retour un objet Prestation, sinon nous n'aurons pas accès aux méthodes du modèle
+    this.collection.push(new Prestation(item)); // sans utiliser le `_` , on fait appel à la méthode magique `set`
   }
 
   // update item in collection
   public update(item: Prestation, state: State) {
     item.state = state;
-    console.log(item.state);
+    console.log('update: ', item.state);
 
   }
 

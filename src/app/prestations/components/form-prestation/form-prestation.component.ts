@@ -11,7 +11,7 @@ export class FormPrestationComponent implements OnInit {
 
   public states = Object.values(State);
   public init = new Prestation(); // On initialise le formulaire comme étant un objet Prestation
-  //
+  // Permet d'envoyer de l'enfant d'un parent
   @Output() nItem: EventEmitter<Prestation> = new EventEmitter(); // Importer EventEmitter depuis @angular/core
 
   constructor() { }
@@ -20,6 +20,8 @@ export class FormPrestationComponent implements OnInit {
   }
 
   public onSubmit() {
+    // Méthode emit() nécessaire pour la liaison parent/enfant
+    // Récupérer les données par défaut et envoyer les modifications
     this.nItem.emit(this.init);
   }
 

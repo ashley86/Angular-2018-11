@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 import { TemplateModule } from '../template/template.module';
 import { FormPrestationComponent } from './components/form-prestation/form-prestation.component';
@@ -10,6 +10,7 @@ import { ListPrestationsComponent } from './containers/list-prestations/list-pre
 import { PageAddPrestationComponent } from './pages/page-add-prestation/page-add-prestation.component';
 import { PagePrestationsComponent } from './pages/page-prestations/page-prestations.component';
 import { PrestationsRoutingModule } from './prestations-routing.module';
+import { ReactiveFormPrestationComponent } from './components/reactive-form-prestation/reactive-form-prestation.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PrestationsRoutingModule } from './prestations-routing.module';
     PrestationComponent,
     PageAddPrestationComponent,
     AddPrestationComponent,
-    FormPrestationComponent
+    FormPrestationComponent,
+    ReactiveFormPrestationComponent
   ],
   imports: [
     CommonModule,
@@ -26,6 +28,7 @@ import { PrestationsRoutingModule } from './prestations-routing.module';
     SharedModule,
     TemplateModule,
     FormsModule,
+    ReactiveFormsModule, // Permet d'utiliser les reactive forms
   ]
 })
 export class PrestationsModule { }
