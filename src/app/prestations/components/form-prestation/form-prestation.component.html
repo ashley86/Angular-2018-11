@@ -5,8 +5,9 @@
     <div class="form-group">
       <label for="type">Type</label>
       <!-- two way data binding: permet de faire du data binding ET de l'event binding, d'où les crochets (data) suivis de parenthèses (event)-->
-      <input [(ngModel)]="init.typePresta" required name="type" type="text" class="form-control" id="type">{{
-      init.typePresta }}
+      <input [(ngModel)]="init.typePresta" required name="type" type="text" class="form-control" id="type" #type="ngModel">
+      {{ init.typePresta }}
+      <div class="alert alert-danger" *ngIf="type.invalid && type.touched">Champ invalide</div>
     </div>
 
     <div class="form-group">

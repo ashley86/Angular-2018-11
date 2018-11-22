@@ -325,3 +325,6 @@ Observable froid: permet de récupérer les données, pour mettre à jour, on do
 => complete(): permet d'envoyer les données
 
 Subject: (multicast)
+
+
+Liste des status de champs: https://angular.io/api/forms/FormGroup
