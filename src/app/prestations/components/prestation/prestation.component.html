@@ -1,4 +1,4 @@
-<tr>
+<tr (click)="detail($event)">
     <td>{{ item.id }}</td>
     <td>{{ item.typePresta }}</td>
     <td>{{ item.client }}</td>
@@ -17,7 +17,7 @@
         attribut `name` est important
         [(ngModel)]="item.state" permet de récupérer la valeur et de la sélectionner automatiquement
        -->
-      <select name="state" (change)="changeState($event)" [(ngModel)]="item.state">
+      <select name="state" (change)="changeState($event)" [(ngModel)]="item.state" (click)="$event.stopPropagation();">
         <!--
           Une autre façon de faire, mais plus compliquée
           <option [value]="item.state">{{ item.state }}</option>
@@ -28,7 +28,7 @@
       </select>
     </td>
     <td>
-      <a (click)="deletePresta(item)"><fa-icon [icon]="faTrash"></fa-icon></a>
-      <a (click)="deletePresta(item)"><fa-icon [icon]="faEdit"></fa-icon></a>
+      <a (click)="$event.stopPropagation(); deletePresta(item)"><fa-icon [icon]="faTrash"></fa-icon></a>
+      <a (click)="$event.stopPropagation(); " [routerLink]="['edit', item.id]"><fa-icon [icon]="faEdit"></fa-icon></a>
     </td>
   </tr>

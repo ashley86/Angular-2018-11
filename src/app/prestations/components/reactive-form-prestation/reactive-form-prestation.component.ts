@@ -1,7 +1,9 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { State } from 'src/app/shared/enums/state.enum';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Prestation } from 'src/app/shared/models/prestation.model';
+import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-reactive-form-prestation',
@@ -12,16 +14,24 @@ export class ReactiveFormPrestationComponent implements OnInit {
 
   public states = Object.values(State);
   public form: FormGroup; // Ne pas instancier, c'est le formBuilder qui va le faire
-  private init = new Prestation;
+  // private init = new Prestation;
+  @Input() init = new Prestation;
   // EventEmitter doit être importé depuis @angular/core
   @Output() nItem: EventEmitter<Prestation> = new EventEmitter();
+  public preta$: Observable<Prestation>;
 
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
     this.createForm(); // Permet d'instancier le formulaire au chargement du composant
+
+    this.route.data
+      .subscribe((presta: Prestation ) => {
+        this.init = new Prestation(presta);
+      });
   }
 
   private createForm() {

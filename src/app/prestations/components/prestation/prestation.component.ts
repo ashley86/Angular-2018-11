@@ -3,6 +3,7 @@ import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { State } from 'src/app/shared/enums/state.enum';
 import { Prestation } from 'src/app/shared/models/prestation.model';
 import { PrestationService } from '../../services/prestation.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-prestation',
@@ -18,10 +19,14 @@ export class PrestationComponent implements OnInit {
   public faEdit = faEdit;
 
   constructor(
-    private ps: PrestationService
+    private ps: PrestationService,
+    private router: Router,
+    private ar: ActivatedRoute
   ) {}
 
   ngOnInit() {
+    console.log(this.ar);
+
   }
 
   public changeState(event) {
@@ -36,6 +41,15 @@ export class PrestationComponent implements OnInit {
     this.ps.delete(item).then((data) => {
       console.log('delete presta', data);
     });
+  }
+
+  public detail() {
+    this.ps.presta$.next(this.item);
+    this.ps.item$.next(this.item);
+    // Permet de récupérer la dernière valeur statique stockée dans un BehaviorSubject
+    // console.log(this.ps.presta$.value);
+    this.router.navigate(['detail'], {relativeTo: this.ar});
+    // Ou: this.router.navigate(['prestations/detail']);
   }
 
 }

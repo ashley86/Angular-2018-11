@@ -1,0 +1,4 @@
+<!-- On ne peut pas utiliser l'observable directement, il faut utiliser une variable qui récupère l'item courant de l'Observable -->
+<p *ngIf="presta$ | async as presta">
+ {{ presta | json }}
+</p>

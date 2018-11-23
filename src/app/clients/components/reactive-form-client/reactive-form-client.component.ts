@@ -35,7 +35,7 @@ export class ReactiveFormClientComponent implements OnInit {
 
   ngOnInit() {
     this.item = this.cs.getClient(this.id);
-    this.init = {...this.item};
+    // this.init = {...this.item};
    // console.log("init client", this.init);
 
     this.createForm(); // Permet d'instancier le formulaire au chargement du composant
@@ -69,7 +69,7 @@ export class ReactiveFormClientComponent implements OnInit {
   }
 
   public onSubmit() {
-    console.log("client form", this.form.value);
+    console.log('client form', this.form.value);
     this.nItem.emit(this.form.value);
   }
 

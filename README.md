@@ -532,5 +532,27 @@ import { ChangeDetectionStrategy } from '@angular/core';
  `| async` plus besoin de `subscribe` ou `unsubscribe`
 
 
-## Créer une collection pour client
-## Ajouter une colonne pour éditer ou supprimer une ligne
+Exercices
+* Créer une collection pour client
+* Ajouter une colonne pour éditer ou supprimer une ligne
+
+
+L'Observable Subject (chaud) reste à l'écoute
+
+next() => envoyer un nouveau flux de donnée à l'Observable (même princique que push())
+
+async subject => ne récupère/retient aucune donnée lors de l'initialisation
+behavior subject => récupère une donnée par défaut, ne stocke qu'un flux de données à la fois
+subject => diffuse le flux de données immédiatement et ne stocke rien
+
+## Test unitaires
+
+Jasmine => Effectue des tests unitaires
+
+`app.component.spec.ts`
+
+Exemple de tests: https://codecraft.tv/courses/angular/unit-testing/components/
+
+reactive forms: https://toddmotto.com/angular-dynamic-components-forms
+
+

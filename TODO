@@ -1,21 +1,21 @@
 
 Todo:
-  ☐ breakpoints et explain bootstrap 4 and grids
-  ☐ grids system and gutters
-  ☐ life cycle hooks
+  ✔ breakpoints et explain bootstrap 4 and grids @done(18-11-23 09:09)
+  ✔ grids system and gutters @done(18-11-23 09:09)
+  ✔ life cycle hooks @done(18-11-23 09:09)
 
-  ☐ Module 1 : Concepts de base du JavaScript
+  ✔ Module 1 : Concepts de base du JavaScript @done(18-11-23 09:18)
   ✔ Principes et fonctionnements @done(18-11-19 17:03)
   ✔ Variables et types de données @done(18-11-21 09:18)
-  ☐ Opérateurs
-  ☐ Instructions
+  ✔ Opérateurs @done(18-11-23 09:17)
+  ✔ Instructions @done(18-11-23 09:17)
   ✔ Structures de contrôles (conditions, boucles...) @done(18-11-21 09:18)
-  ☐ Définition et utilisation de fonctions
-  ☐ Objets prédéfinis(document, window ...)
-  ☐ Contrôle de saisies et traitement de formulaires
-  ☐ Gestion des fenêtres (ouverture, fermeture, communication)
-  ☐ Boîtes de dialogue
-  ☐ Atelier : apprendre à valider un formulaire
+  ✔ Définition et utilisation de fonctions @done(18-11-23 09:19)
+  ✘ Objets prédéfinis(document, window ...) @cancelled(18-11-23 09:18)
+  ✘ Contrôle de saisies et traitement de formulaires @cancelled(18-11-23 09:18)
+  ✘ Gestion des fenêtres (ouverture, fermeture, communication) @cancelled(18-11-23 09:18)
+  ✘ Boîtes de dialogue @cancelled(18-11-23 09:18)
+  ✔ Atelier : apprendre à valider un formulaire @done(18-11-23 09:09)
 
   ✔ Module 2 : ANGULAR 5 - Introduction @done(18-11-21 12:56)
   ✔ Développement d'applications riches @done(18-11-19 17:03)
@@ -23,79 +23,79 @@ Todo:
   ✔ Présentation de l'environnement de développement NodeJS @done(18-11-19 17:03)
   ✔ Atelier : Installation et mise en route d'un projet Angular @done(18-11-19 17:03)
 
-  ☐ Module 3 : ES2015
+  ✔ Module 3 : ES2015 @done(18-11-23 09:15)
   ✔ Lien entre Angular et ES2015/TS @done(18-11-19 17:03)
   ✔ Classes, fondamentaux: constructeur, méthode et gestion de contexte @done(18-11-21 12:56)
-  ☐ Classes, avancés: héritage, méthodes statiques
+  ✔ Classes, avancés: héritage, méthodes statiques @done(18-11-23 09:10)
   ✔ Opérateurs set et get @done(18-11-21 12:56)
-  ☐ Littéraux de Gabarits
-  ☐ Fonctions fléchées
-  ☐ Variables de bloc
+  ✔ Littéraux de Gabarits @done(18-11-23 09:10)
+  ✔ Fonctions fléchées @done(18-11-23 09:15) (arrow function)
+  ✔ Variables de bloc @done(18-11-23 09:15)
 
   ✔ Module 4 : Typescript @done(18-11-21 12:56)
   ✔ Déclaration de type @done(18-11-21 12:56)
   ✔ Interface et formes @done(18-11-21 12:56)
   ✔ Décorateurs @done(18-11-21 12:56)
 
-  ☐ Module 5 : Première application
-  ☐ Dépendances d'Angular
+  ✔ Module 5 : Première application @done(18-11-23 09:14)
+  ✔ Dépendances d'Angular @done(18-11-23 09:10)
   ✔ Déclarer un composant @done(18-11-19 17:04)
   ✔ Ajouter un gabarit @done(18-11-19 17:04)
   ✔ Lancer l'application avec un serveur NodeJS @done(18-11-19 17:04)
   ✔ Re-compiler automatiquement à chaque modification: le veilleur @done(18-11-19 17:04)
   ✔ Ajouter des données, créer ses classes de modèle @done(18-11-21 12:57)
-  ☐ Lier une donnée au gabarit, expressions et opérateur «moustache»
+  ✔ Lier une donnée au gabarit, expressions et opérateur «moustache» @done(18-11-23 09:14)
   ✔ Gérer des collections, directive *ngFor @done(18-11-21 12:57)
   ✔ Atelier : Création d'une première application @done(18-11-21 12:57)
 
-  ☐ Module 6 : Formulaire
-  ☐ Liaison des événements d'entrée
+  ✔ Module 6 : Formulaire @done(18-11-23 09:17)
+  ✔ Liaison des événements d'entrée @done(18-11-23 09:10)
   ✔ L'objet $event @done(18-11-21 12:57)
-  ☐ Variable de référence de gabarit
-  ☐ Créaton de formulaire avec la syntaxe de gabarit
-  ☐ Liaison de données à double sens
-  ☐ Suivre et valider les saisies utilisateur avec ngControl
-  ☐ Soumettre le formulaire avec ngSubmit
-  ☐ Atelier : Gestion des entrées utilisateurs
+  ✔ Variable de référence de gabarit @done(18-11-23 09:10)
+  ✔ Créaton de formulaire avec la syntaxe de gabarit @done(18-11-23 09:10)
+  ✔ Liaison de données à double sens @done(18-11-23 09:10)
+  ✔ Suivre et valider les saisies utilisateur avec ngControl @done(18-11-23 09:13)
+  ✔ Soumettre le formulaire avec ngSubmit @done(18-11-23 09:11)
+  ✔ Atelier : Gestion des entrées utilisateurs @done(18-11-23 09:11)
 
-  ☐ Module 7 : Injection de dépendances
+  ✔ Module 7 : Injection de dépendances @done(18-11-23 09:17)
   ✔ Principes de DI @done(18-11-21 12:57)
-  ☐ Configurer l'injecteur
-  ☐ Enregistrer des fournisseurs dans un composant
-  ☐ Création de l'injecteur
-  ☐ Différents types de fournisseurs: classe, valeur, fabrique...
+  ✔ Configurer l'injecteur @done(18-11-23 09:12)
+  ✔ Enregistrer des fournisseurs dans un composant @done(18-11-23 09:12)
+  ✔ Création de l'injecteur @done(18-11-23 09:12)
+  ✔ Différents types de fournisseurs: classe, valeur, fabrique... @done(18-11-23 09:12)
   ✔ Atelier : Architecturer notre application sous forme d'une organisation de services @done(18-11-21 12:58)
 
-  ☐ Module 8 : La Syntaxe de gabarit en détail
-  ☐ Interpollation, expression et instruction
-  ☐ Syntaxe de liaison: sens unique, double sens, cibles de liaison
-  ☐ Directives natives: NgClass, NgStyle, NgIf, NgSwitch, NgFor
-  ☐ Propriétés d'entrée et de sortie
-  ☐ Opérateurs d'expression de gabarit «|» et «?.»
+  ✔ Module 8 : La Syntaxe de gabarit en détail @done(18-11-23 09:17)
+  ✔ Interpollation, expression et instruction @done(18-11-23 09:12)
+  ✔ Syntaxe de liaison: sens unique, double sens, cibles de liaison @done(18-11-23 09:12)
+  ✔ Directives natives: NgClass, NgStyle, NgIf, NgSwitch, NgFor @done(18-11-23 09:12)
+  ✔ Propriétés d'entrée et de sortie @done(18-11-23 09:12)
+  ✔ Opérateurs d'expression de gabarit «|» et «?.» @done(18-11-23 09:12)
 
-  ☐ Module 9 : Le client HTTP
-  ☐ Principe de communication asynchrone
-  ☐ Récupérer des données avec http.get
-  ☐ Observable RxJS
-  ☐ Prise en charge du transport JSON
-  ☐ Gestion des erreurs
-  ☐ Envoi de données au serveur
-  ☐ Fonctionnement des promesses
-  ☐ Sources externes: CORS
-  ☐ Atelier : Mettre en place un client d'API ReST
+  ✔ Module 9 : Le client HTTP @done(18-11-23 15:35)
+  ✔ Principe de communication asynchrone @done(18-11-23 15:34)
+  ✔ Récupérer des données avec http.get @done(18-11-23 15:34)
+  ✔ Observable RxJS @done(18-11-23 09:12)
+  ✔ Prise en charge du transport JSON @done(18-11-23 15:34)
+  ✔ Gestion des erreurs @done(18-11-23 09:12)
+  ✔ Envoi de données au serveur @done(18-11-23 15:34)
+  ✔ Fonctionnement des promesses @done(18-11-23 09:12)
+  ✔ Sources externes: CORS @done(18-11-23 15:34)
+  ✔ Atelier : Mettre en place un client d'API ReST @done(18-11-23 15:34)
 
-  ☐ Module 10 : Routage
+  ✔ Module 10 : Routage @done(18-11-23 09:13)
   ✔ Routage côté client, hashtag et HTML5 @done(18-11-21 12:58)
   ✔ Configuration des routes sur un composant @done(18-11-21 12:58)
-  ☐ Récupérer des paramètres de routes
-  ☐ Stratégie de routes
+  ✔ Récupérer des paramètres de routes @done(18-11-23 09:13)
+  ✔ Stratégie de routes @done(18-11-23 09:13)
   ✔ Routes imbriquées @done(18-11-21 12:58)
-  ☐ Atelier : Mettre en place une application multi-vues
+  ✔ Atelier : Mettre en place une application multi-vues @done(18-11-23 09:13)
 
-  ☐ Module 11 : Tester l'application
-  ☐ Fondamentaux des tests avec Jasmine
-  ☐ Automatisation des tests avec Karma
-  ☐ Tester des composants simples
-  ☐ Tester des composants avec services asynchrones
-  ☐ Tester des formulaires
-  ☐ Atelier : Multiples exemples de tests
+  ✔ Module 11 : Tester l'application @done(18-11-23 15:34)
+  ✔ Fondamentaux des tests avec Jasmine @done(18-11-23 15:34)
+  ✔ Automatisation des tests avec Karma @done(18-11-23 15:34)
+  ✔ Tester des composants simples @done(18-11-23 15:34)
+  ✔ Tester des composants avec services asynchrones @done(18-11-23 15:34)
+  ✔ Tester des formulaires @done(18-11-23 15:34)
+  ✔ Atelier : Multiples exemples de tests @done(18-11-23 15:34)

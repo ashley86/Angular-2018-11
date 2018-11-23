@@ -41,13 +41,13 @@ export class ClientService {
     this.collection.push(new Client(item)); // sans utiliser le `_` , on fait appel à la méthode magique `set`
   }*/
   // Add With Firebase
-  add(item: Client): Promise<any> {
+  add(item: Client) { // : Promise<any> {
     const id = this.afs.createId();
     // spread operators `...` : syntaxe de décomposition
     const client = { id, ...item };
-    return this.itemsCollection.doc(id).set(client).catch((e) => {
+    /*return this.itemsCollection.doc(id).set(client).catch((e) => {
       console.log(e);
-    });
+    });*/
     // return this.http.post('urlapi/prestations', item);
   }
 

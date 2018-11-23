@@ -22,3 +22,4 @@
     </li>
   </ul>
 </nav>
+<div *ngIf="item$ | async as item">{{ item.client | json }} est affiché</div>

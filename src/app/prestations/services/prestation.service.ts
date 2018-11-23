@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
+import { Observable, BehaviorSubject, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { State } from 'src/app/shared/enums/state.enum';
 import { Prestation } from 'src/app/shared/models/prestation.model';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root' // permet d'utiliser le service sans le déclarer dans providers (Angular 6+)
@@ -14,9 +15,12 @@ export class PrestationService {
   private itemsCollection: AngularFirestoreCollection<Prestation>;
   // Convention de nommage pour les Observable
   private _collection$: Observable<Prestation[]>;
+  public presta$: BehaviorSubject<Prestation> = new BehaviorSubject(null);
+  public item$: Subject<Prestation> = new Subject();
 
   constructor(
-    private afs: AngularFirestore
+    private afs: AngularFirestore,
+    private http: HttpClient
   ) {
     // this.collection = fakePrestations;
     this.itemsCollection = afs.collection<Prestation>('prestations');
@@ -25,11 +29,23 @@ export class PrestationService {
       // map(data => data.map(presta => new Prestation(presta)))
       // Long version:
       map((data) => {
+        this.presta$.next(data[0]);
         return data.map((presta) => {
           return new Prestation(presta);
         });
       })
     );
+
+    // Requête HTTP
+    // this.http retour un Observable
+/*    this.collection$ = this.http.get<Prestation>('urlapi').pipe(
+      map((data) => {
+        this.presta$.next(data[0]);
+        return data.map((presta) => {
+          return new Prestation(presta);
+        });
+      })
+    ); */
    }
 
   // get collection
@@ -59,7 +75,12 @@ export class PrestationService {
     return this.itemsCollection.doc(id).set(prestation).catch((e) => {
       console.log(e);
     });
-    // return this.http.post('urlapi/prestations', item);
+    // requête HTTP
+    // add(item: Prestation): Observable<any>
+    // Ne pas oublier d'effectuer un subscribe sur TOUS les types de requêtes
+    // Cela permet d'exécuter la requête
+    // return this.http.post('urlapi/prestations/add', item);
+    //
   }
 
   // update item in collection

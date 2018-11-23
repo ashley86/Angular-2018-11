@@ -8,11 +8,12 @@ import { TemplateModule } from '../template/template.module';
 import { ClientsRoutingModule } from './clients-routing.module';
 import { ClientComponent } from './components/client/client.component';
 import { ReactiveFormClientComponent } from './components/reactive-form-client/reactive-form-client.component';
+import { AddClientComponent } from './containers/add-client/add-client.component';
+import { EditClientComponent } from './containers/edit-client/edit-client.component';
 import { ListClientsComponent } from './containers/list-clients/list-clients.component';
 import { PageAddClientComponent } from './pages/page-add-client/page-add-client.component';
 import { PageClientsComponent } from './pages/page-clients/page-clients.component';
 import { PageEditClientComponent } from './pages/page-edit-client/page-edit-client.component';
-import { EditClientComponent } from './containers/edit-client/edit-client.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { EditClientComponent } from './containers/edit-client/edit-client.compon
     PageAddClientComponent,
     ReactiveFormClientComponent,
     PageEditClientComponent,
-    EditClientComponent
+    EditClientComponent,
+    AddClientComponent
   ],
   imports: [
     CommonModule,

@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { Client } from 'src/app/shared/models/client.model';
 import { ClientService } from '../../services/client.service';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-page-add-client',
-  templateUrl: './page-add-client.component.html',
-  styleUrls: ['./page-add-client.component.scss']
+  selector: 'app-add-client',
+  templateUrl: './add-client.component.html',
+  styleUrls: ['./add-client.component.scss']
 })
-export class PageAddClientComponent implements OnInit {
+export class AddClientComponent implements OnInit {
 
   constructor(
     private cs: ClientService,
@@ -23,9 +23,10 @@ export class PageAddClientComponent implements OnInit {
     // this.router.navigate(['clients', /*arguments in second params*/]);
 
     this.cs.add(item);
-//    .then((data) => {
+    // .then((data) => {
       // en fonction du retour de l'api, on peut rediriger
-//      this.router.navigate(['clients', /*arguments in second params*/]);
-//    });
+    //  this.router.navigate(['clients', /*arguments in second params*/]);
+    // });
   }
+
 }

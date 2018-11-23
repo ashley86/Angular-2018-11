@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginModule } from './login/login.module';
 import { UiModule } from './ui/ui.module';
+import { HttpClientModule } from '@angular/common/http';
 
 // Utiliser les euros pour transformer une valeur
 import { registerLocaleData } from '@angular/common';
@@ -27,7 +28,8 @@ registerLocaleData(localeFr);
     AppRoutingModule, // Importation du routing
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    FournisseursModule
+    FournisseursModule,
+    HttpClientModule,
   ],
   providers: [
     {

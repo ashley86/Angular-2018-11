@@ -23,6 +23,12 @@ export class AddPrestationComponent implements OnInit {
       // en fonction du retour de l'api, on peut rediriger
       this.router.navigate(['prestations', /*arguments in second params*/]);
     });
+
+    // En cas de requête HTTP
+/*    this.ps.add(item).subscribe((data) => {
+        // actions...
+      }); */
+    // Ne pas oublier d'utilise UNSUBSCRIBE dans un ngOnDestroy();
   }
 
 }

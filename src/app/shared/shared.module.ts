@@ -10,7 +10,7 @@ import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [TotalPipe, TableauComponent, StateDirective, AddRowComponent],
   // Ne pas oublier d'insérer dans exports pour pouvoir utiliser ailleurs
-  exports: [TotalPipe, TableauComponent, StateDirective, AddRowComponent],
+  exports: [TotalPipe, TableauComponent, StateDirective, AddRowComponent, FontAwesomeModule, RouterModule],
   imports: [
     CommonModule,
     FontAwesomeModule,
