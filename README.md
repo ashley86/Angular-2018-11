@@ -3,6 +3,7 @@
 * Organisme: **EDUGROUP**
 * Dates: **19 au 23-11-2018**
 * Formateur: **[Christophe Gueroult](https://github.com/ChristopheGueroult)**
+* Tél: 06 56 85 84 33 - Email: christophegueroult@gmail.com
 
 ## Outils
  * [Visual Studio Code](https://code.visualstudio.com/download/)
