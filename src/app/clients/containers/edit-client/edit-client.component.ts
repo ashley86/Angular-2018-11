@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Client } from 'src/app/shared/models/client.model';
 import { ClientService } from '../../services/client.service';
 
@@ -10,18 +10,23 @@ import { ClientService } from '../../services/client.service';
 })
 export class EditClientComponent implements OnInit {
 
+  public item;
+  public client: Client;
+
   constructor(
     private cs: ClientService,
-    private router: Router
+    private router: Router,
+    private route: ActivatedRoute,
   ) { }
 
   ngOnInit() {
+    this.route.data.subscribe((data: {item: Client}) => {
+      this.client = data.item;
+    });
   }
 
   public edit(item: Client) {
-    // this.cs.add(item);
-    // this.router.navigate(['clients', /*arguments in second params*/]);
-
+    item.id = this.client.id; // on rajoute l'id, car on ne récupère pas l'id de base
     this.cs.update(item).then((data) => {
       // en fonction du retour de l'api, on peut rediriger
       this.router.navigate(['clients']);

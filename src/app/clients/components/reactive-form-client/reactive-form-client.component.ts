@@ -14,13 +14,12 @@ import { ClientService } from '../../services/client.service';
 export class ReactiveFormClientComponent implements OnInit {
   public statesClient = Object.values(StateClient);
   public form: FormGroup; // Ne pas instancier, c'est le formBuilder qui va le faire
-  // private init = new Client;
-  private init: Client;
-  // EventEmitter doit être importé depuis @angular/core
+//   private init = new Client;
+  @Input() init = new Client;
+// EventEmitter doit être importé depuis @angular/core
   @Output() nItem: EventEmitter<Client> = new EventEmitter();
   private id: string;
-
-  @Input() item: Observable<Client>;
+  public client$: Observable<Client>;
 
   constructor(
     private fb: FormBuilder,
@@ -34,11 +33,16 @@ export class ReactiveFormClientComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.item = this.cs.getClient(this.id);
+//    this.item = this.cs.getClient(this.id);
     // this.init = {...this.item};
    // console.log("init client", this.init);
 
     this.createForm(); // Permet d'instancier le formulaire au chargement du composant
+
+    this.route.data
+      .subscribe((client: Client) => {
+        this.init = new Client(client);
+      });
   }
 
   private createForm() {

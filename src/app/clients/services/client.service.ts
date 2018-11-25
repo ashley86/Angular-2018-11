@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
+import { Observable, BehaviorSubject, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { StateClient } from 'src/app/shared/enums/state-client.enum';
 import { Client } from 'src/app/shared/models/client.model';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root' // permet d'utiliser le service sans le déclarer dans providers (Angular 6+)
@@ -14,12 +15,22 @@ export class ClientService {
   private itemsCollection: AngularFirestoreCollection<Client>;
   // Convention de nommage pour les Observable
   private _collection$: Observable<Client[]>;
+  public client$: BehaviorSubject<Client> = new BehaviorSubject(null);
+  public item$: Subject<Client> = new Subject();
 
   constructor(
-    private afs: AngularFirestore
+    private afs: AngularFirestore,
+    private http: HttpClient
   ) {
     this.itemsCollection = afs.collection<Client>('clients');
-    this.collection$ = this.itemsCollection.valueChanges();
+    this.collection$ = this.itemsCollection.valueChanges().pipe(
+      map((data) => {
+        this.client$.next(data[0]);
+        return data.map((client) => {
+          return new Client(client);
+        });
+      })
+    );
    }
 
   // get collection
@@ -41,14 +52,12 @@ export class ClientService {
     this.collection.push(new Client(item)); // sans utiliser le `_` , on fait appel à la méthode magique `set`
   }*/
   // Add With Firebase
-  add(item: Client) { // : Promise<any> {
+  add(item: Client): Promise<any> {
     const id = this.afs.createId();
-    // spread operators `...` : syntaxe de décomposition
     const client = { id, ...item };
-    /*return this.itemsCollection.doc(id).set(client).catch((e) => {
+    return this.itemsCollection.doc(id).set(client).catch((e) => {
       console.log(e);
-    });*/
-    // return this.http.post('urlapi/prestations', item);
+    });
   }
 
   // update item in collection
@@ -64,6 +73,7 @@ export class ClientService {
     if (stateClient) {
       client.stateClient = stateClient;
     }
+    console.log('update', client);
     return this.itemsCollection.doc(item.id).update(client).catch((e) => {
       console.log(e);
     });
